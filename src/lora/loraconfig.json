@@ -1,0 +1,32 @@
+{
+    
+    "train_data" : "/qa_train_set.pkl",
+    
+    "checkpoint": "HuggingFaceTB/SmolLM-135M-Instruct",
+    "device": "cuda:1",
+    "lora": {
+      "r": 8,
+      "lora_alpha": 16,
+      "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+      "lora_dropout": 0.05,
+      "bias": "none",
+      "task_type": "CAUSAL_LM",
+      "inference_mode": false
+    },
+    "training": {
+      "per_device_train_batch_size": 4,
+      "gradient_accumulation_steps": 4,
+      "warmup_steps": 10,
+      "max_steps": 100,
+      "learning_rate": 0.001,
+      "fp16": true,
+      "logging_steps": 1,
+      "output_dir": "outputs"
+    },
+    "seed": 0,
+    "max_length": 2048,
+
+
+    "model_save_path" : "" 
+  }
+  

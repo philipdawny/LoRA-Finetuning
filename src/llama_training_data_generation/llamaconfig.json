@@ -1,0 +1,16 @@
+{   
+    "model_params": {
+                        "base_url": "http://127.0.0.1:11434/",
+                        "model" : "llama3.1:70b"
+    },
+    
+    
+    "paths" : {
+        "data_path" : "/aviation_text_chunked_02_04.pkl",
+        "output_path" : "/lora_qa_training.pkl",
+
+        "train_save_path": "/qa_train_set.pkl",
+        "test_save_path": "/qa_test_set.pkl"
+    }
+
+}
